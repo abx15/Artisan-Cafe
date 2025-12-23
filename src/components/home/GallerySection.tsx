@@ -23,7 +23,7 @@ const galleryImages = [
     alt: 'Latte art',
   },
   {
-    src: 'https://images.unsplash.com/photo-1483648969698-5e7dcaa9444f?w=400&h=400&fit=crop',
+    src: 'https://i.pinimg.com/originals/d2/bc/bd/d2bcbdf288a8ab494d0397f3f6bef970.jpg',
     alt: 'Fresh pastries',
   },
 ];
