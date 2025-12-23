@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+/* Smooth infinite continuous swiper */
+.continuous-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+.continuous-swiper .swiper-slide {
+  width: auto !important;
+}
