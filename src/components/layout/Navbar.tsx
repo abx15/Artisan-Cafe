@@ -1,21 +1,22 @@
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LogoIcon } from '@/components/icons/CafeIcons';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { LogoIcon } from "@/components/icons/CafeIcons";
+import { Menu, X, ChevronDown } from "lucide-react";
+import logo from "../../assets/logo_fff.png";
 
 const menuCategories = [
-  { name: 'Cakes', to: '/menu/cakes' },
-  { name: 'Chocolates', to: '/menu/chocolates' },
-  { name: 'Chaumin', to: '/menu/chaumin' },
-  { name: 'Drinks', to: '/menu/drinks' },
+  { name: "Cakes", to: "/menu/cakes" },
+  { name: "Chocolates", to: "/menu/chocolates" },
+  { name: "Chaumin", to: "/menu/chaumin" },
+  { name: "Drinks", to: "/menu/drinks" },
 ];
 
 const navLinks = [
-  { name: 'Home', to: '/' },
-  { name: 'Menu', to: '/menu', hasDropdown: true },
-  { name: 'About', to: '/about' },
-  { name: 'Contact', to: '/contact' },
+  { name: "Home", to: "/" },
+  { name: "Menu", to: "/menu", hasDropdown: true },
+  { name: "About", to: "/about" },
+  { name: "Contact", to: "/contact" },
 ];
 
 const Navbar = () => {
@@ -28,8 +29,8 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
@@ -38,7 +39,7 @@ const Navbar = () => {
   }, [location]);
 
   const isActive = (path: string) => {
-    if (path === '/') return location.pathname === '/';
+    if (path === "/") return location.pathname === "/";
     return location.pathname.startsWith(path);
   };
 
@@ -46,33 +47,23 @@ const Navbar = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-background/95 backdrop-blur-md shadow-soft'
-          : 'bg-transparent'
+          ? "bg-background/95 backdrop-blur-md shadow-soft"
+          : "bg-transparent"
       }`}
     >
       <nav className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <motion.div
-              whileHover={{ rotate: 10 }}
-              transition={{ type: 'spring', stiffness: 300 }}
-            >
-              <LogoIcon
-                size={44}
-                className="text-primary group-hover:text-accent transition-colors"
+          <Link to="/" className="flex items-center gap-3">
+            <div className="h-14 lg:h-16 w-auto flex items-center">
+              <img
+                src={logo}
+                alt="Cafe Logo"
+                className="h-full w-auto object-contain transition-transform duration-300 hover:scale-105"
               />
-            </motion.div>
-            <div className="flex flex-col">
-              <span className="font-display text-xl font-bold text-foreground">
-                Artisan
-              </span>
-              <span className="text-xs text-accent tracking-widest uppercase -mt-1">
-                Cafe
-              </span>
             </div>
           </Link>
 
@@ -93,8 +84,8 @@ const Navbar = () => {
                   to={link.to}
                   className={`relative py-2 font-body text-sm tracking-wide transition-colors flex items-center gap-1 ${
                     isActive(link.to)
-                      ? 'text-primary'
-                      : 'text-foreground hover:text-primary'
+                      ? "text-primary"
+                      : "text-foreground hover:text-primary"
                   }`}
                 >
                   {link.name}
@@ -110,8 +101,8 @@ const Navbar = () => {
                   <motion.span
                     className="absolute bottom-0 left-0 h-0.5 bg-accent rounded-full"
                     initial={{ width: 0 }}
-                    animate={{ width: isActive(link.to) ? '100%' : 0 }}
-                    whileHover={{ width: '100%' }}
+                    animate={{ width: isActive(link.to) ? "100%" : 0 }}
+                    whileHover={{ width: "100%" }}
                     transition={{ duration: 0.3 }}
                   />
                 </Link>
@@ -181,7 +172,7 @@ const Navbar = () => {
           {isMobileOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden bg-card rounded-xl mb-4 shadow-card"
@@ -193,8 +184,8 @@ const Navbar = () => {
                       to={link.to}
                       className={`block py-3 px-4 rounded-lg font-body transition-colors ${
                         isActive(link.to)
-                          ? 'bg-secondary text-primary'
-                          : 'text-foreground hover:bg-secondary'
+                          ? "bg-secondary text-primary"
+                          : "text-foreground hover:bg-secondary"
                       }`}
                     >
                       {link.name}
