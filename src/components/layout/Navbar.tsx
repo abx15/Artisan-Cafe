@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { LogoIcon } from "@/components/icons/CafeIcons";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "../../assets/logoAns.png";
+import logo from "../../assets/logo_fff.png";
 
 const menuCategories = [
   { name: "Cakes", to: "/menu/cakes" },
