@@ -1,7 +1,11 @@
-import { motion } from 'framer-motion';
-import CafeButton from '@/components/ui/CafeButton';
-import { CoffeeCupIcon, LeafIcon, StarIcon } from '@/components/icons/CafeIcons';
-import { Sparkles, Clock, MapPin } from 'lucide-react';
+import { motion } from "framer-motion";
+import CafeButton from "@/components/ui/CafeButton";
+import {
+  CoffeeCupIcon,
+  LeafIcon,
+  StarIcon,
+} from "@/components/icons/CafeIcons";
+import { Sparkles, Clock, MapPin } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -13,14 +17,14 @@ const HeroSection = () => {
           <motion.div
             key={i}
             className="absolute text-primary/10"
-            initial={{ y: '100vh', x: `${15 + i * 15}%`, rotate: 0 }}
+            initial={{ y: "100vh", x: `${15 + i * 15}%`, rotate: 0 }}
             animate={{
-              y: '-100vh',
+              y: "-100vh",
               rotate: 360,
               transition: {
                 duration: 20 + i * 5,
                 repeat: Infinity,
-                ease: 'linear',
+                ease: "linear",
                 delay: i * 3,
               },
             }}
@@ -32,18 +36,23 @@ const HeroSection = () => {
         {/* Decorative circles */}
         <motion.div
           animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-accent/20 blur-3xl"
         />
         <motion.div
           animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.2, 0.1] }}
-          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
           className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full bg-primary/20 blur-3xl"
         />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="w-full px-4 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
           <motion.div
@@ -77,7 +86,11 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed"
           >
-            Step into our warm, inviting space and discover a world of handcrafted delights. From freshly baked artisan cakes to rich Belgian chocolates, aromatic single-origin coffees, and savory Indo-Chinese noodles — every item is made with passion and the finest ingredients.
+            Step into our warm, inviting space and discover a world of
+            handcrafted delights. From freshly baked artisan cakes to rich
+            Belgian chocolates, aromatic single-origin coffees, and savory
+            Indo-Chinese noodles — every item is made with passion and the
+            finest ingredients.
           </motion.p>
 
           {/* Quick info badges */}
@@ -126,15 +139,19 @@ const HeroSection = () => {
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-2xl mx-auto"
           >
             {[
-              { number: '50+', label: 'Menu Items' },
-              { number: '8+', label: 'Years Serving' },
-              { number: '15K+', label: 'Happy Customers' },
-              { number: '4.9', label: 'Average Rating', icon: <StarIcon size={14} className="text-accent" /> },
+              { number: "50+", label: "Menu Items" },
+              { number: "8+", label: "Years Serving" },
+              { number: "15K+", label: "Happy Customers" },
+              {
+                number: "4.9",
+                label: "Average Rating",
+                icon: <StarIcon size={14} className="text-accent" />,
+              },
             ].map((stat, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 className="text-center p-4 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50"
-                whileHover={{ y: -3, backgroundColor: 'hsl(var(--card))' }}
+                whileHover={{ y: -3, backgroundColor: "hsl(var(--card))" }}
                 transition={{ duration: 0.2 }}
               >
                 <div className="font-display text-2xl md:text-3xl font-bold text-primary flex items-center justify-center gap-1">
