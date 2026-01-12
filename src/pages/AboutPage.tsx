@@ -1,37 +1,58 @@
-import { motion } from 'framer-motion';
-import PageTransition from '@/components/layout/PageTransition';
-import SectionTitle from '@/components/ui/SectionTitle';
-import CafeButton from '@/components/ui/CafeButton';
-import { LogoIcon, LeafIcon, CoffeeCupIcon } from '@/components/icons/CafeIcons';
-import { Award, Users, Heart, Target } from 'lucide-react';
+import { motion } from "framer-motion";
+import PageTransition from "@/components/layout/PageTransition";
+import SectionTitle from "@/components/ui/SectionTitle";
+import CafeButton from "@/components/ui/CafeButton";
+import {
+  LogoIcon,
+  LeafIcon,
+  CoffeeCupIcon,
+} from "@/components/icons/CafeIcons";
+import { Award, Users, Heart, Target } from "lucide-react";
 
 const milestones = [
-  { year: '2015', title: 'Our Beginning', description: 'Started as a small coffee cart in the heart of the city.' },
-  { year: '2017', title: 'First Cafe', description: 'Opened our flagship cafe with a full bakery section.' },
-  { year: '2019', title: 'Award Winner', description: 'Won "Best Artisan Cafe" at the National Food Awards.' },
-  { year: '2023', title: 'Expansion', description: 'Launched our premium chocolate and noodle offerings.' },
+  {
+    year: "2015",
+    title: "Our Beginning",
+    description: "Started as a small coffee cart in the heart of the city.",
+  },
+  {
+    year: "2017",
+    title: "First Cafe",
+    description: "Opened our flagship cafe with a full bakery section.",
+  },
+  {
+    year: "2019",
+    title: "Award Winner",
+    description: 'Won "Best Artisan Cafe" at the National Food Awards.',
+  },
+  {
+    year: "2023",
+    title: "Expansion",
+    description: "Launched our premium chocolate and noodle offerings.",
+  },
 ];
 
 const values = [
   {
     icon: <Heart size={28} />,
-    title: 'Passion',
-    description: 'Every dish is created with love and dedication to the craft.',
+    title: "Passion",
+    description: "Every dish is created with love and dedication to the craft.",
   },
   {
     icon: <Award size={28} />,
-    title: 'Quality',
-    description: 'We source only the finest ingredients from trusted suppliers.',
+    title: "Quality",
+    description:
+      "We source only the finest ingredients from trusted suppliers.",
   },
   {
     icon: <Users size={28} />,
-    title: 'Community',
-    description: 'Building connections through the joy of shared meals.',
+    title: "Community",
+    description: "Building connections through the joy of shared meals.",
   },
   {
     icon: <Target size={28} />,
-    title: 'Innovation',
-    description: 'Constantly evolving while honoring traditional flavors.',
+    title: "Innovation",
+    description: "Constantly evolving while honoring traditional flavors.",
   },
 ];
 
@@ -50,7 +71,7 @@ const AboutPage = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-cafe-espresso via-cafe-espresso/60 to-transparent" />
           </div>
 
-          <div className="relative container mx-auto px-4 lg:px-8 h-full flex flex-col justify-end pb-16">
+          <div className="relative w-full px-4 lg:px-8 h-full flex flex-col justify-end pb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -85,7 +106,7 @@ const AboutPage = () => {
 
         {/* Story Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="w-full px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div
                 initial={{ opacity: 0, x: -40 }}
@@ -145,7 +166,7 @@ const AboutPage = () => {
 
         {/* Values Section */}
         <section className="py-20 bg-secondary/50">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="w-full px-4 lg:px-8">
             <SectionTitle title="Our Values" subtitle="What Drives Us">
               The principles that guide everything we do at Artisan Cafe.
             </SectionTitle>
@@ -178,7 +199,7 @@ const AboutPage = () => {
 
         {/* Timeline Section */}
         <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="w-full px-4 lg:px-8">
             <SectionTitle title="Our Journey" subtitle="Milestones">
               Key moments that shaped who we are today.
             </SectionTitle>
@@ -195,7 +216,7 @@ const AboutPage = () => {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
                   className={`relative flex items-center gap-8 mb-12 ${
-                    index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                   }`}
                 >
                   <div className="flex-1 text-center md:text-right">
@@ -252,7 +273,7 @@ const AboutPage = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-primary">
-          <div className="container mx-auto px-4 lg:px-8 text-center">
+          <div className="w-full px-4 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -270,7 +291,12 @@ const AboutPage = () => {
                 <CafeButton to="/menu" variant="secondary" size="lg">
                   View Our Menu
                 </CafeButton>
-                <CafeButton to="/contact" variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+                <CafeButton
+                  to="/contact"
+                  variant="outline"
+                  size="lg"
+                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                >
                   Contact Us
                 </CafeButton>
               </div>

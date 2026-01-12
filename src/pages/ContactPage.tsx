@@ -1,40 +1,40 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import PageTransition from '@/components/layout/PageTransition';
-import CafeButton from '@/components/ui/CafeButton';
-import { CoffeeCupIcon } from '@/components/icons/CafeIcons';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import { toast } from 'sonner';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import PageTransition from "@/components/layout/PageTransition";
+import CafeButton from "@/components/ui/CafeButton";
+import { CoffeeCupIcon } from "@/components/icons/CafeIcons";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const contactInfo = [
   {
     icon: <MapPin size={24} />,
-    title: 'Visit Us',
-    content: '123 Artisan Street, Foodie District, Mumbai 400001',
+    title: "Visit Us",
+    content: "123 Artisan Street, Foodie District, Mumbai 400001",
   },
   {
     icon: <Phone size={24} />,
-    title: 'Call Us',
-    content: '+91 98765 43210',
+    title: "Call Us",
+    content: "+91 98765 43210",
   },
   {
     icon: <Mail size={24} />,
-    title: 'Email Us',
-    content: 'hello@artisancafe.com',
+    title: "Email Us",
+    content: "hello@artisancafe.com",
   },
   {
     icon: <Clock size={24} />,
-    title: 'Opening Hours',
-    content: 'Mon - Sun: 8:00 AM - 10:00 PM',
+    title: "Opening Hours",
+    content: "Mon - Sun: 8:00 AM - 10:00 PM",
   },
 ];
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -45,8 +45,8 @@ const ContactPage = () => {
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
-    toast.success('Message sent successfully! We\'ll get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    toast.success("Message sent successfully! We'll get back to you soon.");
+    setFormData({ name: "", email: "", phone: "", message: "" });
     setIsSubmitting(false);
   };
 
@@ -70,7 +70,7 @@ const ContactPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-cafe-espresso/90 via-cafe-espresso/70 to-transparent" />
           </div>
 
-          <div className="relative container mx-auto px-4 lg:px-8 h-full flex flex-col justify-center">
+          <div className="relative w-full px-4 lg:px-8 h-full flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const ContactPage = () => {
 
         {/* Main Content */}
         <section className="py-16">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="w-full px-4 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16">
               {/* Contact Form */}
               <motion.div
@@ -207,7 +207,11 @@ const ContactPage = () => {
                       <span className="flex items-center gap-2">
                         <motion.div
                           animate={{ rotate: 360 }}
-                          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                          transition={{
+                            duration: 1,
+                            repeat: Infinity,
+                            ease: "linear",
+                          }}
                           className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full"
                         />
                         Sending...
@@ -290,7 +294,7 @@ const ContactPage = () => {
 
         {/* FAQ Section */}
         <section className="py-16 bg-secondary/50">
-          <div className="container mx-auto px-4 lg:px-8">
+          <div className="w-full px-4 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -309,20 +313,20 @@ const ContactPage = () => {
             <div className="grid md:grid-cols-2 gap-6 mt-12 max-w-4xl mx-auto">
               {[
                 {
-                  q: 'Do you take reservations?',
-                  a: 'Yes! You can book a table by calling us or filling out the contact form above.',
+                  q: "Do you take reservations?",
+                  a: "Yes! You can book a table by calling us or filling out the contact form above.",
                 },
                 {
-                  q: 'Do you offer catering services?',
-                  a: 'Absolutely! We provide catering for events of all sizes. Contact us for a custom quote.',
+                  q: "Do you offer catering services?",
+                  a: "Absolutely! We provide catering for events of all sizes. Contact us for a custom quote.",
                 },
                 {
-                  q: 'Are there vegan options available?',
-                  a: 'Yes, we have a variety of vegan-friendly options across our menu.',
+                  q: "Are there vegan options available?",
+                  a: "Yes, we have a variety of vegan-friendly options across our menu.",
                 },
                 {
-                  q: 'Do you offer delivery?',
-                  a: 'We partner with major delivery apps. You can also order directly for pickup.',
+                  q: "Do you offer delivery?",
+                  a: "We partner with major delivery apps. You can also order directly for pickup.",
                 },
               ].map((faq, index) => (
                 <motion.div
@@ -334,7 +338,10 @@ const ContactPage = () => {
                   className="bg-card rounded-xl p-6 shadow-soft"
                 >
                   <h3 className="font-display font-semibold text-foreground mb-2 flex items-start gap-3">
-                    <CheckCircle size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <CheckCircle
+                      size={20}
+                      className="text-primary mt-0.5 flex-shrink-0"
+                    />
                     {faq.q}
                   </h3>
                   <p className="text-muted-foreground text-sm pl-8">{faq.a}</p>

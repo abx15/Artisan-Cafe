@@ -1,15 +1,24 @@
-import { motion } from 'framer-motion';
-import CafeButton from '@/components/ui/CafeButton';
-import { Sparkles, Gift, Percent } from 'lucide-react';
+import { motion } from "framer-motion";
+import CafeButton from "@/components/ui/CafeButton";
+import { Sparkles, Gift, Percent } from "lucide-react";
 
 const SpecialOffers = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-primary via-primary-dark to-primary relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
-        <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 100 100"
+          preserveAspectRatio="none"
+        >
           <defs>
-            <pattern id="circles" width="20" height="20" patternUnits="userSpaceOnUse">
+            <pattern
+              id="circles"
+              width="20"
+              height="20"
+              patternUnits="userSpaceOnUse"
+            >
               <circle cx="10" cy="10" r="2" fill="currentColor" />
             </pattern>
           </defs>
@@ -17,7 +26,7 @@ const SpecialOffers = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+      <div className="w-full px-4 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-3 gap-6">
           {/* Offer 1 */}
           <motion.div
@@ -35,7 +44,8 @@ const SpecialOffers = () => {
               Happy Hours
             </h3>
             <p className="text-primary-foreground/80 text-sm mb-4">
-              Get 20% off on all beverages every weekday from 3 PM to 5 PM. Perfect for your afternoon pick-me-up!
+              Get 20% off on all beverages every weekday from 3 PM to 5 PM.
+              Perfect for your afternoon pick-me-up!
             </p>
             <span className="inline-block bg-accent/20 text-accent-light text-xs font-medium px-3 py-1 rounded-full">
               Mon - Fri, 3-5 PM
@@ -58,7 +68,8 @@ const SpecialOffers = () => {
               Birthday Special
             </h3>
             <p className="text-primary-foreground/80 text-sm mb-4">
-              Celebrate your special day with us! Get a complimentary slice of cake when you dine with 4+ guests.
+              Celebrate your special day with us! Get a complimentary slice of
+              cake when you dine with 4+ guests.
             </p>
             <span className="inline-block bg-accent/20 text-accent-light text-xs font-medium px-3 py-1 rounded-full">
               Valid with ID proof
@@ -81,7 +92,8 @@ const SpecialOffers = () => {
               Loyalty Rewards
             </h3>
             <p className="text-primary-foreground/80 text-sm mb-4">
-              Join our loyalty program and earn points on every purchase. Redeem for free treats and exclusive perks!
+              Join our loyalty program and earn points on every purchase. Redeem
+              for free treats and exclusive perks!
             </p>
             <span className="inline-block bg-accent/20 text-accent-light text-xs font-medium px-3 py-1 rounded-full">
               Earn 1 point per ₹10

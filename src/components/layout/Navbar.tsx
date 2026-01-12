@@ -3,7 +3,11 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { LogoIcon } from "@/components/icons/CafeIcons";
 import { Menu, X, ChevronDown } from "lucide-react";
+<<<<<<< HEAD
 import logo from "../../assets/logo_fff.png";
+=======
+import logo from "../../assets/logoAns.png";
+>>>>>>> layout-feature
 
 const menuCategories = [
   { name: "Cakes", to: "/menu/cakes" },
@@ -54,7 +58,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <nav className="container mx-auto px-4 lg:px-8">
+      <nav className="w-full px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">

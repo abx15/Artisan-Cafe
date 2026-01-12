@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { LogoIcon, CoffeeCupIcon } from '@/components/icons/CafeIcons';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { LogoIcon, CoffeeCupIcon } from "@/components/icons/CafeIcons";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="w-full px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
@@ -65,10 +65,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { name: 'Home', to: '/' },
-                { name: 'Our Menu', to: '/menu' },
-                { name: 'About Us', to: '/about' },
-                { name: 'Contact', to: '/contact' },
+                { name: "Home", to: "/" },
+                { name: "Our Menu", to: "/menu" },
+                { name: "About Us", to: "/about" },
+                { name: "Contact", to: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -89,10 +89,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3">
               {[
-                { name: 'Artisan Cakes', to: '/menu/cakes' },
-                { name: 'Premium Chocolates', to: '/menu/chocolates' },
-                { name: 'Savory Chaumin', to: '/menu/chaumin' },
-                { name: 'Signature Drinks', to: '/menu/drinks' },
+                { name: "Artisan Cakes", to: "/menu/cakes" },
+                { name: "Premium Chocolates", to: "/menu/chocolates" },
+                { name: "Savory Chaumin", to: "/menu/chaumin" },
+                { name: "Signature Drinks", to: "/menu/drinks" },
               ].map((link) => (
                 <li key={link.name}>
                   <Link
@@ -113,7 +113,10 @@ const Footer = () => {
             </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                <MapPin
+                  size={18}
+                  className="text-accent mt-0.5 flex-shrink-0"
+                />
                 <span className="text-primary-foreground/70 text-sm">
                   123 Artisan Street, Foodie District, Mumbai 400001
                 </span>
