@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
-import PageTransition from '@/components/layout/PageTransition';
-import CafeButton from '@/components/ui/CafeButton';
-import { CoffeeCupIcon } from '@/components/icons/CafeIcons';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import { toast } from 'sonner';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import PageTransition from "@/components/layout/PageTransition";
+import CafeButton from "@/components/ui/CafeButton";
+import { CoffeeCupIcon } from "@/components/icons/CafeIcons";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { toast } from "sonner";
 
 const contactInfo = [
   {
@@ -31,10 +31,10 @@ const contactInfo = [
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);

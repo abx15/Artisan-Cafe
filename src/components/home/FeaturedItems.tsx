@@ -6,11 +6,15 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 
-import SectionTitle from '@/components/ui/SectionTitle';
-import CafeButton from '@/components/ui/CafeButton';
-import { menuData } from '@/data/menuData';
-import { StarIcon } from '@/components/icons/CafeIcons';
-import { Clock, Flame } from 'lucide-react';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+
+import SectionTitle from "@/components/ui/SectionTitle";
+import CafeButton from "@/components/ui/CafeButton";
+import { menuData } from "@/data/menuData";
+import { StarIcon } from "@/components/icons/CafeIcons";
+import { Clock, Flame } from "lucide-react";
 
 const FeaturedItems = () => {
   const featuredItems = menuData.filter(item => item.featured);

@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { LogoIcon, CoffeeCupIcon } from '@/components/icons/CafeIcons';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { LogoIcon, CoffeeCupIcon } from "@/components/icons/CafeIcons";
+import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +18,7 @@ const Footer = () => {
         </svg>
       </div>
 
-      <div className="container mx-auto px-4 lg:px-8 py-16">
+      <div className="w-full px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
           {/* Brand */}
