@@ -3,11 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { LogoIcon } from "@/components/icons/CafeIcons";
 import { Menu, X, ChevronDown } from "lucide-react";
-<<<<<<< HEAD
 import logo from "../../assets/logo_fff.png";
-=======
+=========
 import logo from "../../assets/logoAns.png";
->>>>>>> layout-feature
+>>>>>>>>> Temporary merge branch 2
 
 const menuCategories = [
   { name: "Cakes", to: "/menu/cakes" },

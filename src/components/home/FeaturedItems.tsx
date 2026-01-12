@@ -1,6 +1,10 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, EffectCoverflow } from "swiper/modules";
-import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination, EffectCoverflow } from 'swiper/modules';
+import { motion } from 'framer-motion';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,14 +17,15 @@ import { StarIcon } from "@/components/icons/CafeIcons";
 import { Clock, Flame } from "lucide-react";
 
 const FeaturedItems = () => {
-  const featuredItems = menuData.filter((item) => item.featured);
+  const featuredItems = menuData.filter(item => item.featured);
 
   return (
     <section className="py-28 bg-secondary/50 overflow-hidden">
-      <div className="w-full px-4 lg:px-8">
+      <div className="container mx-auto px-4 lg:px-8">
+
         <SectionTitle title="Chef's Favorites" subtitle="Featured Items">
-          Hand-picked selections from our master chefs — tried, tested, and
-          loved by thousands of customers.
+          Hand-picked selections from our master chefs — tried, tested, and loved
+          by thousands of customers.
         </SectionTitle>
 
         <Swiper
@@ -31,11 +36,13 @@ const FeaturedItems = () => {
           loop
           speed={9000} // 🔥 continuous smooth speed
           slidesPerView={1}
+
           autoplay={{
             delay: 0, // 🔥 key for infinite scroll
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
+
           coverflowEffect={{
             rotate: 0,
             stretch: 60,
@@ -43,23 +50,27 @@ const FeaturedItems = () => {
             modifier: 1.5,
             slideShadows: false,
           }}
+
           pagination={{
             clickable: true,
             bulletClass:
-              "swiper-pagination-bullet !bg-primary/30 !w-2.5 !h-2.5",
-            bulletActiveClass: "!bg-accent !w-8 !rounded-full",
+              'swiper-pagination-bullet !bg-primary/30 !w-2.5 !h-2.5',
+            bulletActiveClass:
+              '!bg-accent !w-8 !rounded-full',
           }}
+
           breakpoints={{
             640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
+
           className="continuous-swiper !pb-20"
         >
           {featuredItems.map((item) => (
             <SwiperSlide key={item.id}>
               <motion.article
                 whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 200 }}
+                transition={{ type: 'spring', stiffness: 200 }}
                 className="group bg-card rounded-2xl overflow-hidden shadow-card mx-3 my-6"
               >
                 {/* IMAGE */}
@@ -121,6 +132,7 @@ const FeaturedItems = () => {
             View Full Menu
           </CafeButton>
         </div>
+
       </div>
     </section>
   );

@@ -42,12 +42,10 @@
 }
 
 
-
 /* Smooth infinite continuous swiper */
 .continuous-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
-
 .continuous-swiper .swiper-slide {
-  transition-timing-function: linear !important;
+  width: auto !important;
 }
